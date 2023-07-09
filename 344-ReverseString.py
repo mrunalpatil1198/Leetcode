@@ -2,7 +2,7 @@ class Solution:
     def reverseString(self, s: list[str]):
         i = 0
         j = len(s)-1
-        #swap first word with last word and so on
+        #swap first char with last char and so on
         while i <= j:
             s[i], s[j] = s[j],s[i]
             j -= 1
