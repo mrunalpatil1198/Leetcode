@@ -20,4 +20,4 @@ if __name__ == '__main__':
     s.moveZeroes([0,1,0,3,12])
 
 #Time Complexity - O(n)
-#Space Complexity - O(n)
+#Space Complexity - O(1)
