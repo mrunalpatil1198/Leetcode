@@ -3,7 +3,7 @@ class Solution:
         if p == '*' or s == p:
             return True
         
-        #Create a dynamic programming table with dimensions (len(s) + 1) x (len(p) + 1)
+        #Create a dp table with dimensions (len(s) + 1) x (len(p) + 1)
         #dp[i][j] represents whether s[:i] matches p[:j]
         dp = [[False for _ in range(len(p)+1)] for _ in range(len(s)+1)]
 
@@ -34,5 +34,8 @@ class Solution:
 if __name__ == '__main__':
     s = Solution()
     print(s.isMatch(s = "aa", p = "a"))
+
+#Time Complexity - O(n*m) where n = len(s) and m = len(p)
+#Space Complexity - O(n*m) where n = len(s) and m = len(p)
 
 
