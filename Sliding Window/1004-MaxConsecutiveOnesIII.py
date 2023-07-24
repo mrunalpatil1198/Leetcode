@@ -5,7 +5,7 @@ class Solution:
         #pointer pointing to the start of window
         left = 0
 
-        #right: pointer pointing to the current (end) of window 
+        #traverse num using right pointer
         for right in range(len(nums)):
 
             if nums[right] == 0:
