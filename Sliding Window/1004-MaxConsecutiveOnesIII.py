@@ -22,7 +22,7 @@ class Solution:
                     #increment left by 1 to move it past the first 0 in window in order to accomodate current 0
                     left += 1
 
-            #update the 'result' with the maximum window size seen so far
+            #update the result with the maximum window size seen so far
             result = max(result, right-left+1)
 
         return result
