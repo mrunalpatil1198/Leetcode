@@ -9,7 +9,7 @@ class Solution:
     def reverseKGroup(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
         curr = head
 
-        #checking if we have atleast k nodes left
+        #checking if we have atleast k nodes left in order to reverse
         for _ in range(k):
             if not curr:
                 return head
