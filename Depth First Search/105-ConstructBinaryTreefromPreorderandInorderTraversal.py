@@ -9,15 +9,19 @@ class Solution:
     def buildTree(self, preorder: list[int], inorder: list[int]):
         val_to_inorder_index = {inorder[i] : i for i in range(len(inorder))}
         preorder = deque(preorder)
+
         def build(start, end):
             if not preorder or start < 0 or end >= len(inorder):
                 return None
+            #getting curr root
             root_val = preorder[0]
             inorder_index = val_to_inorder_index[root_val]
             if inorder_index < start or inorder_index > end:
                 return None
             root = TreeNode(preorder.popleft())
+            #building left subtree
             root.left = build(start, inorder_index-1)
+            #building right subtree
             root.right = build(inorder_index+1, end)
             return root
 
