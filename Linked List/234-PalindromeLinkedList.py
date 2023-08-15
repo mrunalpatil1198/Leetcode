@@ -36,5 +36,13 @@ class Solution:
 
         return True
     
+if __name__ == '__main__':
+    s = Solution()
+    head = ListNode(1)
+    head.next = ListNode(2)
+    head.next.next = ListNode(2)
+    head.next.next.next = ListNode(1)
+    print(s.isPalindrome(head))
+    
 #Time Complexity - O(n)
 #Space Complexity - O(1)
