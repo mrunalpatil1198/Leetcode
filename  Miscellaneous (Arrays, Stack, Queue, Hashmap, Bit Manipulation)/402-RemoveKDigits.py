@@ -6,7 +6,6 @@ class Solution:
             while stack and k and stack[-1] > n:
                 stack.pop()
                 k -= 1
-        
             if stack or n is not '0':
                 stack.append(n)
         
@@ -18,3 +17,6 @@ class Solution:
 if __name__ == '__main__':
     s = Solution()
     print(s.removeKdigits(num = "1432219", k = 3))
+
+#Time Complexity - O(n^2)
+#Space Complexity - O(n)
